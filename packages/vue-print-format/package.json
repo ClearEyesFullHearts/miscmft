@@ -1,0 +1,70 @@
+{
+  "name": "@miscmft/vue-print-format",
+  "version": "0.1.0",
+  "description": "Vue 3 components for creating print-ready, multi-page documents with automatic pagination",
+  "type": "module",
+  "license": "MIT",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "print",
+    "pagination",
+    "pdf",
+    "document",
+    "print-document",
+    "multi-page",
+    "overflow-handling"
+  ],
+  "main": "./dist/vue-print-format.umd.cjs",
+  "module": "./dist/vue-print-format.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-print-format.js",
+      "require": "./dist/vue-print-format.umd.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./dist/vue-print-format.css": "./dist/vue-print-format.css",
+    "./dist/*": "./dist/*"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc --project tsconfig.build.json",
+    "preview": "vite preview",
+    "prepublishOnly": "yarn build",
+    "lint": "eslint ./src",
+    "lint:ci": "cross-env NODE_OPTIONS=--max_old_space_size=2048 yarn lint --format gitlab",
+    "outdated": "yarn upgrade-interactive",
+    "security-recursive": "yarn npm audit --environment production -R"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "@types/node": "^22.10.2",
+    "@vitejs/plugin-vue": "^5.2.4",
+    "@vue/compiler-sfc": "^3.5.15",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.27.0",
+    "eslint-formatter-gitlab": "^6.0.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-n": "^17.18.0",
+    "eslint-plugin-promise": "^7.2.1",
+    "eslint-plugin-vue": "^10.1.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.6",
+    "vue": "^3.5.15",
+    "vue-eslint-parser": "^10.1.3"
+  }
+}
